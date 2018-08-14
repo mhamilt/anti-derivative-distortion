@@ -1,7 +1,7 @@
 % This file deals with plotting the function tanh against its
 % anti-derivative and anti-anti derivative expressions to visualise
 % how each of these functions approximates the explicit function
-
+lineWidth = 1.5
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % set x axis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -27,9 +27,9 @@ adRange = x(1:end-1);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % plot to compare
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-plot (x,explicit, 'DisplayName', 'tanh(x)');
+plot (x,explicit, 'DisplayName', 'tanh(x)','LineWidth',lineWidth);
 hold on
-plot((x0+x1)/2, antiDerivative, 'DisplayName', 'anti-Derivative');
+plot((x0+x1)/2, antiDerivative, 'DisplayName', 'anti-Derivative','LineWidth',lineWidth);
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -45,7 +45,7 @@ for i = 1:2:10
   stepNum = 1000*i;
   tag = sprintf('anti-anti-derivative: %d steps', stepNum);
   aaDerivative = (tanhaad(xx0, stepNum) - 2*tanhaad(xx1, stepNum) + tanhaad(xx2, stepNum))/(dx^2);
-  plot(xx1, aaDerivative, 'DisplayName', tag)
+  plot(xx1, aaDerivative, 'DisplayName', tag,'LineWidth',lineWidth)
 end
 
 legend(gca,'show')
