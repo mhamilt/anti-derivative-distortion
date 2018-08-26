@@ -10,7 +10,7 @@ This script will plot a tanh function against the anti-anti-derivate function at
 An approximation of integrating spence's function in MATLAB. The function takes the form `spence(x, steps)` for an array x where steps is the number of grid points used in the approximation. The integral is approximated by summing the a rectangular and triangular area underneath the function `x` between discrete steps.
 
 ### integral appoximation
-<img src="https://github.com/mhamilt/anti-derivative-distortion/blob/master/images/integral_approximation.png" width="50%" height="50%">
+<img style="display: block;margin-left: auto;margin-right: auto;width: 25%;" src="https://github.com/mhamilt/anti-derivative-distortion/blob/master/images/integral_approximation.png">
 
 ## tanhaad.m
 The operation of performing the anti-anti-derivative on a tanh function. This is essentially a second order finite difference operation.
