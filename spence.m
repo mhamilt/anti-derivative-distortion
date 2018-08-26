@@ -7,7 +7,6 @@ function out = spence(in, stepCount)
   % greater than 10000. Higher stepCount will result in higher computation cost
   for i = 1:length(in)
 
-    % stepCount = 10000;
     du = abs(in(i)/stepCount);
     u = linspace(0,in(i),stepCount);
     totalArea = 0;
